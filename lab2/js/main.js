@@ -15,8 +15,9 @@ const kitchenSliper = new Swiper('.swiper', {
 
 
 
-const menuButtonOpen = document.querySelectorAll('.menu__item-btn')
 const mask = document.querySelector('.mask')
+
+const menuButtonOpen = document.querySelectorAll('.menu__item-btn')
 
 menuButtonOpen.forEach((element) => {
   element.addEventListener('click', () => {

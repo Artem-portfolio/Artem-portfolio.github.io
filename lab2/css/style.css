@@ -318,6 +318,7 @@ body.disable {
 .pop-up__text {
   font-size: 22px;
   font-style: italic;
+  margin-bottom: 20px;
 }
 
 .pop-up__btn {
@@ -337,6 +338,12 @@ body.disable {
 
 .pop-up__img {
   height: 100%;
+}
+
+.pop-up__rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .map iframe {

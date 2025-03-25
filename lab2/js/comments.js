@@ -1,23 +1,19 @@
-const addCommentBtn = document.querySelector('.comments__form-btn')
-const commentInputName = document.querySelector('.comments__form-input--name')
-const commentInputMail = document.querySelector('.comments__form-input--mail')
-const commentText = document.querySelector('.comments__form-area')
+const addCommentBtn = document.querySelector(".comments__form-btn")
+const commentInputName = document.querySelector(".comments__form-input--name")
+const commentInputMail = document.querySelector(".comments__form-input--mail")
+const commentText = document.querySelector(".comments__form-area")
 const commentArea = document.querySelector(".comments__area")
 
+addCommentBtn.addEventListener("click", addComment)
 
-console.log(addCommentBtn);
-addCommentBtn.addEventListener('click', addComment)
-
-
-function addComment(event) {
+function addComment() {
 
   if (!commentInputName.value || !commentText.value) {
-    alert("Не введено ім'я або текст коментаря!")
     return
   }
   
-  const comment = document.createElement('div')
-  comment.classList.add('comments__item')
+  const comment = document.createElement("div")
+  comment.classList.add("comments__item")
   comment.innerHTML = `   
                  <div class="comments__item-textbox">
                     <div class="comments__item-textbox__box">
@@ -27,7 +23,7 @@ function addComment(event) {
                   </div>
                   <p class="comments__item-text">${commentText.value}</p>`
   commentArea.append(comment)
-  commentInputName.value = ''
-  commentInputMail.value = ''
-  commentText.value = ''
+  commentInputName.value = ""
+  commentInputMail.value = ""
+  commentText.value = ""
 }
